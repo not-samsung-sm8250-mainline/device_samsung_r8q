@@ -33,14 +33,14 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_NAME := custom_r8q
 PRODUCT_DEVICE := r8q
 PRODUCT_BRAND := google
-PRODUCT_MODEL := SM-G780G
-PRODUCT_MANUFACTURER := google
+PRODUCT_MODEL := Pixel 10 Pro
+PRODUCT_MANUFACTURER := Google
 
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
+PRODUCT_GMS_CLIENTID_BASE := google-samsung
 
-# Use the latest approved GMS identifiers
+# unapproved GMS identifiers ¯\_(ツ)_/¯
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="r8qxx-user 13 TP1A.220624.014 G780GXXSHEYJ1 release-keys" \
-    BuildFingerprint=samsung/r8qxx/r8q:11/RP1A.200720.012/G780GXXSHEYJ1:user/release-keys \
+    BuildDesc="blazer-user 17 CP2A.260605.012 15430684 release-keys" \
+    BuildFingerprint=google/blazer/blazer:17/CP2A.260605.012/15430684:user/release-keys \
     DeviceProduct=r8qxx \
     SystemName=r8qxx
