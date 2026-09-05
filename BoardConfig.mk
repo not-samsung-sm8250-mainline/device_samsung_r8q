@@ -28,8 +28,7 @@ include device/samsung/sm8250-common/BoardConfigCommon.mk
 # Display
 TARGET_SCREEN_DENSITY := 420
 
-# Kernel
-TARGET_KERNEL_CONFIG += vendor/samsung/r8q.config
+# Kernel (config comes from the mainline tree: defconfig + r8q.config)
 BOARD_NAME := SRPUB26A007
 
 # OTA assert
