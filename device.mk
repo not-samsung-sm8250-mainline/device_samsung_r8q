@@ -19,6 +19,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 TARGET_MAINLINE_SIMPLEDRM_BOOTSTRAP := true
+TARGET_MAINLINE_R8Q_BRINGUP := true
 
 # Mainline graphics must be selected before common.mk filters downstream HALs.
 $(call inherit-product, device/samsung/sm8250-common/mainline-graphics.mk)
