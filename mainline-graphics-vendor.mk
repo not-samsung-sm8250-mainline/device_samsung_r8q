@@ -67,8 +67,13 @@ MAINLINE_A650_ZAP_SOURCE := $(firstword $(wildcard \
     vendor/samsung/r8q/proprietary/vendor/firmware/a650_zap.mbn \
     vendor/samsung/r8q/proprietary/vendor/firmware/qcom/sm8250/a650_zap.mbn))
 ifneq ($(strip $(MAINLINE_A650_ZAP_SOURCE)),)
+MAINLINE_A650_ZAP_COPY := $(MAINLINE_A650_ZAP_SOURCE):$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/sm8250/a650_zap.mbn
+ifneq ($(filter $(MAINLINE_A650_ZAP_COPY),$(PRODUCT_COPY_FILES)),)
+# The vendor generator already emitted this exact copy rule.
+else
 PRODUCT_COPY_FILES += \
-    $(MAINLINE_A650_ZAP_SOURCE):$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/sm8250/a650_zap.mbn
+    $(MAINLINE_A650_ZAP_COPY)
+endif
 endif
 
 endif
