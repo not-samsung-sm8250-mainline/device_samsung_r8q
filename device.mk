@@ -96,3 +96,4 @@ $(call inherit-product, vendor/samsung/r8q/r8q-vendor.mk)
 
 # Apply mainline-only vendor filtering after all generated vendor makefiles.
 $(call inherit-product, $(LOCAL_PATH)/mainline-graphics-vendor.mk)
+$(call inherit-product, $(LOCAL_PATH)/mainline-firmware.mk)
