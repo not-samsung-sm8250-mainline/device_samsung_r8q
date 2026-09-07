@@ -93,3 +93,6 @@ $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/samsung/fingerprint:
 
 # Inherit r8q blobs
 $(call inherit-product, vendor/samsung/r8q/r8q-vendor.mk)
+
+# Apply mainline-only vendor filtering after all generated vendor makefiles.
+$(call inherit-product, $(LOCAL_PATH)/mainline-graphics-vendor.mk)
