@@ -37,8 +37,12 @@ $(call soong_config_set,samsungCameraVars,extra_ids,52)
 
 # Init
 PRODUCT_PACKAGES += \
-    android.hardware.multi-sku.rc \
+    android.hardware.multi-sku.rc
+
+ifneq ($(TARGET_USES_MAINLINE_GRAPHICS),true)
+PRODUCT_PACKAGES += \
     init.r8q.rc
+endif
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_samsung_r8q)
 
